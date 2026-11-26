@@ -1,0 +1,197 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Shopping Website</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">Cards Gallery</div>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#cards">Cards</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="home">
+        
+        <h1>Explore the World  Through Cards !!!!!</h1>
+    </section>
+
+    <!-- Product Cards -->
+    <section id="cards">
+        <h1 class="heading"></h1>
+
+        <div class="container">
+            <!-- !1) Bag -->
+            <div class="product-card">
+                <span class="discount">35% OFF</span>
+                <span class="heart">♡</span>
+
+                <img src="{% static 'images/bag.jpeg' %}" alt="Bag">
+
+                <h2>Bag</h2>
+                <p class="price">₹1,299</p>
+
+                <button>Add to Cart</button>
+            </div>
+
+            
+            <!--! 2) Profile -->
+            <div class="profile-card">
+                <h1> <mark>INFOSYS</mark></h1>
+                
+
+                <img src="{% static 'images/profile.jpeg' %}" alt="Profile">
+
+                <h3><b>Name :</b>Pranathi Natte</h3>
+                <h4><b>Employee id :</b>INF1027</h4>
+                <h4><b>Designation :</b>Software Engineer</h4>
+                <h4><b>Department :</b>IT</h4>
+                <h4><b>Location :</b>Hyderbad</h4>
+            </div>
+
+            <!-- Lipstick -->
+            <div class="product-card">
+                
+
+                <img src="{% static 'images/lipstick.jpeg' %}" alt="Lipstick">
+                <h2>M.A.C Cosmetics</h2>
+                <h2>Lipstick</h2>
+                <p class="price">₹699</p>
+                <p class="rating">⭐⭐⭐⭐⭐⭐(4.5)</p>
+               
+            </div>
+
+            <!-- Shoes -->
+            <div class="product-card">
+                <span class="discount">40% OFF</span>
+                <span class="heart">♡</span>
+
+                <img src="{% static 'images/shoe.jpeg' %}" alt="Shoes">
+
+                <h2><p>Woodland</p></h2>
+                <p>Men Leather Derbys</p>
+                <mark >Diwali price Drop</mark>
+
+                <span class="discount">50% OFF</span>
+                <span class="discount">50% OFF</span>
+                <p class="price"><strike>₹1708</strike><sub>₹1699</sub></p>
+
+               <h4><p class="bestprice">Best Price ₹1395 <p>with 2 offers</p> </p></h4> 
+            </div>
+<!-- Charminar -->
+         <div class="travel-card">
+    <span>DESTINATION OF THE DAY</span>
+
+    <h2>Explore Hyderabad</h2>
+
+    <img src="{% static 'images/charminar.jpg' %}">
+
+    <small>TELANGANA, INDIA</small>
+
+    <p>
+        Hyderabad is famous for its historical monuments,
+        delicious food and beautiful places.
+    </p>
+
+    <p class="travel-more">
+        Visitors can explore Charminar, Golconda Fort,
+        Hussain Sagar and many other attractions.
+    </p>
+
+    <button onclick="toggleCard(this)">Read More</button>
+</div>
+
+            <!-- Watch -->
+            <div class="product-card">
+                <span class="discount">50% OFF</span>
+                <span class="heart">♡</span>
+
+                <img src="{% static 'images/watch.jpeg' %}" alt="Watch">
+
+                <h2>Analog Watch</h2>
+                <p class="price">₹1,499 </p>
+                <p>₹1,590 with COD</p>
+
+                <button class="watchrating">4.2⭐</button>
+            </div>
+
+            
+
+            <!-- Headphones Card -->
+<div class="headphone-card">
+
+    <span class="best">BEST SELLER</span>
+
+    <img src="{% static 'images/headphones.jpeg' %}"
+         alt="Headphones">
+
+    <h2>boAt Headphones</h2>
+
+    <p>Bluetooth Wireless</p>
+
+    <p class="headphone-price">₹1,999</p>
+
+    <p class="offer">25% OFF</p>
+
+    <button>Buy Now</button>
+
+</div>
+
+            
+
+<div class="nature-card">
+
+    <img src="{% static 'images/nature.jpeg' %}" alt="Nature">
+
+    <h2>Discover Nature</h2>
+
+    <p>
+        Nature is a beautiful gift to humanity.
+        It provides fresh air, water, food and shelter.
+        Trees, rivers and mountains make our planet beautiful.
+    </p>
+
+    <div id="extraNature" style="display:none;">
+        <p>
+            Nature plays an important role in our daily lives.
+            It helps maintain ecological balance and provides
+            a peaceful environment. We should protect forests,
+            save water and keep our surroundings clean.
+        </p>
+    </div>
+
+    <button onclick="toggleNature()">Read More</button>
+
+</div>
+
+<script>
+function toggleNature() {
+    let content = document.getElementById("extraNature");
+    let button = event.target;
+
+    if (content.style.display === "none") {
+        content.style.display = "block";
+        button.innerText = "Read Less";
+    } else {
+        content.style.display = "none";
+        button.innerText = "Read More";
+    }
+}
+</script>
+
+            
+
+        </div>
+    </section>
+
+</body>
+</html>
